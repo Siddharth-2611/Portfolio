@@ -66,8 +66,8 @@
         // CV download functionality
         document.querySelector('.cv-btn').addEventListener('click', function(e) {
             e.preventDefault();
-            // In a real application, this would link to an actual PDF file
-            alert('CV download feature - In a real application, this would download your CV PDF file.');
+            const resumeLink = 'https://drive.google.com/file/d/1tVRaaCQYnUosW85cRwwAFdtE4Cd0MPEp/view?usp=drive_link'
+            window.open(resumeLink, "_blank");
         });
 
 
