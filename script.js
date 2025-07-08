@@ -72,19 +72,21 @@
 
 
  // contact me
-document.getElementById("contact-form").addEventListener("submit", function (e) {
-  e.preventDefault(); // prevent default form submission
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("contact-form");
 
-  const name = document.getElementById("name").value.trim();
-  const email = document.getElementById("email").value.trim();
-  const message = document.getElementById("message").value.trim();
+  form.addEventListener("submit", function (e) {
+    e.preventDefault(); // 🚫 Prevent default form refresh
 
-  const subject = `Message from ${name}`;
-  const body = `Name: ${name}%0D%0AEmail: ${email}%0D%0A%0D%0AMessage:%0D%0A${encodeURIComponent(message)}`;
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const message = document.getElementById("message").value.trim();
 
- const gmailLink = `https://mail.google.com/mail/?view=cm&fs=1&to=siddharthkr264@gmail.com&su=${encodeURIComponent(subject)}&body=${body}`;
- window.open(gmailLink, "_blank");
+    const subject = `Message from ${name}`;
+    const body = `Name: ${name}%0D%0AEmail: ${email}%0D%0A%0D%0AMessage:%0D%0A${encodeURIComponent(message)}`;
 
+    const gmailLink = `https://mail.google.com/mail/?view=cm&fs=1&to=siddharthkr264@gmail.com&su=${encodeURIComponent(subject)}&body=${body}`;
 
-  window.location.href = mailtoLink;
+    window.open(gmailLink, "_blank"); // ✅ Open Gmail tab
+  });
 });
