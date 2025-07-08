@@ -32,25 +32,26 @@
         });
 
         // Form submission
-        document.querySelector('.contact-form').addEventListener('submit', function(e) {
-            e.preventDefault();
+
+        // document.querySelector('.contact-form').addEventListener('submit', function(e) {
+        //     e.preventDefault();
             
-            // Get form data
-            const formData = new FormData(this);
-            const name = formData.get('name');
-            const email = formData.get('email');
-            const message = formData.get('message');
+        //     // Get form data
+        //     const formData = new FormData(this);
+        //     const name = formData.get('name');
+        //     const email = formData.get('email');
+        //     const message = formData.get('message');
             
-            // Simple validation
-            if (!name || !email || !message) {
-                alert('Please fill in all fields.');
-                return;
-            }
+        //     // Simple validation
+        //     if (!name || !email || !message) {
+        //         alert('Please fill in all fields.');
+        //         return;
+        //     }
             
-            // Simulate form submission
-            alert('Thank you for your message! I\'ll get back to you soon.');
-            this.reset();
-        });
+        //     // Simulate form submission
+        //     alert('Thank you for your message! I\'ll get back to you soon.');
+        //     this.reset();
+        // });
 
         // Navbar background change on scroll
         window.addEventListener('scroll', function() {
