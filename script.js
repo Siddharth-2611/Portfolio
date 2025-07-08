@@ -82,7 +82,9 @@ document.getElementById("contact-form").addEventListener("submit", function (e) 
   const subject = `Message from ${name}`;
   const body = `Name: ${name}%0D%0AEmail: ${email}%0D%0A%0D%0AMessage:%0D%0A${encodeURIComponent(message)}`;
 
-  const mailtoLink = `mailto:siddharthkr264@gmail.com?subject=${encodeURIComponent(subject)}&body=${body}`;
+ const gmailLink = `https://mail.google.com/mail/?view=cm&fs=1&to=siddharthkr264@gmail.com&su=${encodeURIComponent(subject)}&body=${body}`;
+ window.open(gmailLink, "_blank");
+
 
   window.location.href = mailtoLink;
 });
