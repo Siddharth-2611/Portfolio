@@ -33,25 +33,25 @@
 
         // Form submission
 
-        // document.querySelector('.contact-form').addEventListener('submit', function(e) {
-        //     e.preventDefault();
+        document.querySelector('.contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
             
-        //     // Get form data
-        //     const formData = new FormData(this);
-        //     const name = formData.get('name');
-        //     const email = formData.get('email');
-        //     const message = formData.get('message');
+            // Get form data
+            const formData = new FormData(this);
+            const name = formData.get('name');
+            const email = formData.get('email');
+            const message = formData.get('message');
             
-        //     // Simple validation
-        //     if (!name || !email || !message) {
-        //         alert('Please fill in all fields.');
-        //         return;
-        //     }
+            // Simple validation
+            if (!name || !email || !message) {
+                alert('Please fill in all fields.');
+                return;
+            }
             
-        //     // Simulate form submission
-        //     alert('Thank you for your message! I\'ll get back to you soon.');
-        //     this.reset();
-        // });
+            // Simulate form submission
+            alert('Thank you for your message! I\'ll get back to you soon.');
+            this.reset();
+        });
 
         // Navbar background change on scroll
         window.addEventListener('scroll', function() {
@@ -72,21 +72,21 @@
 
 
  // contact me
-document.addEventListener("DOMContentLoaded", () => {
-  const form = document.getElementById("contact-form");
+// document.addEventListener("DOMContentLoaded", () => {
+//   const form = document.getElementById("contact-form");
 
-  form.addEventListener("submit", function (e) {
-    e.preventDefault(); // 🚫 Prevent default form refresh
+//   form.addEventListener("submit", function (e) {
+//     e.preventDefault(); // 🚫 Prevent default form refresh
 
-    const name = document.getElementById("name").value.trim();
-    const email = document.getElementById("email").value.trim();
-    const message = document.getElementById("message").value.trim();
+//     const name = document.getElementById("name").value.trim();
+//     const email = document.getElementById("email").value.trim();
+//     const message = document.getElementById("message").value.trim();
 
-    const subject = `Message from ${name}`;
-    const body = `Name: ${name}%0D%0AEmail: ${email}%0D%0A%0D%0AMessage:%0D%0A${encodeURIComponent(message)}`;
+//     const subject = `Message from ${name}`;
+//     const body = `Name: ${name}%0D%0AEmail: ${email}%0D%0A%0D%0AMessage:%0D%0A${encodeURIComponent(message)}`;
 
-    const gmailLink = `https://mail.google.com/mail/?view=cm&fs=1&to=siddharthkr264@gmail.com&su=${encodeURIComponent(subject)}&body=${body}`;
+//     const gmailLink = `https://mail.google.com/mail/?view=cm&fs=1&to=siddharthkr264@gmail.com&su=${encodeURIComponent(subject)}&body=${body}`;
 
-    window.open(gmailLink, "_blank"); // ✅ Open Gmail tab
-  });
-});
+//     window.open(gmailLink, "_blank"); // ✅ Open Gmail tab
+//   });
+// });
