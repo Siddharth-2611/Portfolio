@@ -68,3 +68,20 @@
             // In a real application, this would link to an actual PDF file
             alert('CV download feature - In a real application, this would download your CV PDF file.');
         });
+
+
+ // contact me
+document.getElementById("contact-form").addEventListener("submit", function (e) {
+  e.preventDefault(); // prevent default form submission
+
+  const name = document.getElementById("name").value.trim();
+  const email = document.getElementById("email").value.trim();
+  const message = document.getElementById("message").value.trim();
+
+  const subject = `Message from ${name}`;
+  const body = `Name: ${name}%0D%0AEmail: ${email}%0D%0A%0D%0AMessage:%0D%0A${encodeURIComponent(message)}`;
+
+  const mailtoLink = `mailto:siddharthkr264@gmail.com?subject=${encodeURIComponent(subject)}&body=${body}`;
+
+  window.location.href = mailtoLink;
+});
