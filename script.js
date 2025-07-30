@@ -77,7 +77,7 @@ function openModal(certId) {
   const imageMap = {
     cert1: "assets/Certificates/IBM1.png",
     cert2: "assets/Certificates/IBM2.png",
-    cert3: "https://via.placeholder.com/300x200/1a1a1a/00ff00?text=Web+Development",
+    cert3: "assets/Certificates/Chatgpt.png",
     cert4: "https://via.placeholder.com/300x200/1a1a1a/00ff00?text=Data+Science"
   };
 
