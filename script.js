@@ -70,6 +70,16 @@
             window.open(resumeLink, "_blank");
         });
 
+function openModal(imageSrc) {
+  const modal = document.getElementById("certificateModal");
+  const modalImg = document.getElementById("modalImage");
+  modal.style.display = "block";
+  modalImg.src = imageSrc;
+}
+
+function closeModal() {
+  document.getElementById("certificateModal").style.display = "none";
+}
 
  // contact me
 // document.addEventListener("DOMContentLoaded", () => {
