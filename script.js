@@ -70,16 +70,28 @@
             window.open(resumeLink, "_blank");
         });
 
-function openModal(imageSrc) {
+function openModal(certId) {
   const modal = document.getElementById("certificateModal");
   const modalImg = document.getElementById("modalImage");
-  modal.style.display = "block";
-  modalImg.src = imageSrc;
+
+  const imageMap = {
+    cert1: "assets/Certificates/IBM1.png",
+    cert2: "https://via.placeholder.com/300x200/1a1a1a/00ff00?text=Machine+Learning",
+    cert3: "https://via.placeholder.com/300x200/1a1a1a/00ff00?text=Web+Development",
+    cert4: "https://via.placeholder.com/300x200/1a1a1a/00ff00?text=Data+Science"
+  };
+
+  const imageSrc = imageMap[certId];
+  if (imageSrc) {
+    modal.style.display = "block";
+    modalImg.src = imageSrc;
+  }
 }
 
 function closeModal() {
   document.getElementById("certificateModal").style.display = "none";
 }
+
 
  // contact me
 // document.addEventListener("DOMContentLoaded", () => {
