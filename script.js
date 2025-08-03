@@ -43,7 +43,7 @@
             const message = formData.get('message');
             
             // Simple validation
-            if (!name || !email || !message) {
+            if (!name || !email ) {
                 alert('Please fill in all fields.');
                 return;
             }
@@ -110,4 +110,5 @@ function closeModal() {
     });
 
 // });
+
 
