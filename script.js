@@ -101,7 +101,7 @@ function closeModal() {
       const message = encodeURIComponent(document.getElementById("message").value);
       
       const email = "siddharthws@email.com"; // replace with your email
-      const subject = encodeURIComponent("Message from Website Contact Form");
+      const subject = encodeURIComponent("New Message from Portfolio Website");
       const body = `Name: ${name}%0D%0A%0D%0AMessage:%0D%0A${message}`;
       
       const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${subject}&body=${body}`;
@@ -110,6 +110,7 @@ function closeModal() {
     });
 
 // });
+
 
 
 
