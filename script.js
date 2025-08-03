@@ -39,11 +39,11 @@
             // Get form data
             const formData = new FormData(this);
             const name = formData.get('name');
-            const email = formData.get('email');
+            // const email = formData.get('email');
             const message = formData.get('message');
             
             // Simple validation
-            if (!name || !email ) {
+            if (!name || !message ) {
                 alert('Please fill in all fields.');
                 return;
             }
@@ -110,5 +110,6 @@ function closeModal() {
     });
 
 // });
+
 
 
