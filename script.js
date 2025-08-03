@@ -105,7 +105,7 @@ document.getElementById("contactForm").addEventListener("submit", function (e) {
     return;
   }
 
-  const yourEmail = "my@gmail.com";
+  const yourEmail = "siddharthws26@gmail.com";
   const subject = encodeURIComponent("New Message from Portfolio Website");
 
   // Format the message like a formal email body
@@ -120,6 +120,7 @@ document.getElementById("contactForm").addEventListener("submit", function (e) {
 
 
 // });
+
 
 
 
