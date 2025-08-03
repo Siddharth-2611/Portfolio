@@ -33,25 +33,25 @@
 
         // Form submission
 
-        document.querySelector('.contact-form').addEventListener('submit', function(e) {
-            e.preventDefault();
+        // document.querySelector('.contact-form').addEventListener('submit', function(e) {
+        //     e.preventDefault();
             
-            // Get form data
-            const formData = new FormData(this);
-            const name = formData.get('name');
-            // const email = formData.get('email');
-            const message = formData.get('message');
+        //     // Get form data
+        //     const formData = new FormData(this);
+        //     const name = formData.get('name');
+        //     // const email = formData.get('email');
+        //     const message = formData.get('message');
             
-            // Simple validation
-            if (!name || !message ) {
-                alert('Please fill in all fields.');
-                return;
-            }
+        //     // Simple validation
+        //     if (!name || !message ) {
+        //         alert('Please fill in all fields.');
+        //         return;
+        //     }
             
-            // Simulate form submission
-            alert("Redirecting to Gmail. Please Complete and Send your message.");
-            this.reset();
-        });
+        //     // Simulate form submission
+        //     alert("Redirecting to Gmail. Please Complete and Send your message.");
+        //     this.reset();
+        // });
 
         // Navbar background change on scroll
         window.addEventListener('scroll', function() {
@@ -94,22 +94,33 @@ function closeModal() {
 
 
  // contact me
- document.getElementById("contactForm").addEventListener("submit", function(e) {
-      e.preventDefault();
+document.getElementById("contactForm").addEventListener("submit", function (e) {
+  e.preventDefault();
 
-      const name = encodeURIComponent(document.getElementById("name").value);
-      const message = encodeURIComponent(document.getElementById("message").value);
-      
-      const email = "siddharthws@email.com"; // replace with your email
-      const subject = encodeURIComponent("New Message from Portfolio Website");
-      const body = `Name: ${name}%0D%0A%0D%0AMessage:%0D%0A${message}`;
-      
-      const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${subject}&body=${body}`;
-      
-      window.open(gmailUrl, "_blank");
-    });
+  const name = document.getElementById("name").value.trim();
+  const message = document.getElementById("message").value.trim();
+
+  if (!name || !message) {
+    alert("Please fill in both fields.");
+    return;
+  }
+
+  const yourEmail = "my@gmail.com";
+  const subject = encodeURIComponent("New Message from Portfolio Website");
+
+  // Format the message like a formal email body
+  const rawBody = `${name},\n\n${message}`;
+  const body = encodeURIComponent(rawBody);
+
+  const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${yourEmail}&su=${subject}&body=${body}`;
+
+  alert("Thanks! Gmail will now open so you can send your message.");
+  window.open(gmailUrl, "_blank");
+});
+
 
 // });
+
 
 
 
