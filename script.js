@@ -49,7 +49,7 @@
             }
             
             // Simulate form submission
-            alert('Thank you for your message! I\'ll get back to you soon.');
+            alert("Redirecting to Gmail. Please Complete and Send your message.");
             this.reset();
         });
 
@@ -110,6 +110,7 @@ function closeModal() {
     });
 
 // });
+
 
 
 
