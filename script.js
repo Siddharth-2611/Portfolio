@@ -66,7 +66,7 @@
         // CV download functionality
         document.querySelector('.cv-btn').addEventListener('click', function(e) {
             e.preventDefault();
-            const resumeLink = 'https://drive.google.com/file/d/1tVRaaCQYnUosW85cRwwAFdtE4Cd0MPEp/view?usp=drive_link'
+            const resumeLink = 'https://drive.google.com/file/d/1gmq6Th2yMlBi210Xe-X2g21q6AeGp1X-/view?usp=drive_link'
             window.open(resumeLink, "_blank");
         });
 
